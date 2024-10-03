@@ -1,0 +1,107 @@
+{
+    "grippykitten69#UWU": {
+        "name": "grippykitten69#UWU",
+        "mostDeaths": 14,
+        "mostKills": 43,
+        "champions": [
+            {
+                "name": "Twitch",
+                "games": 11,
+                "deaths": 74,
+                "kda": 2.9864864864864864,
+                "wr": 63.63636363636363
+            },
+            {
+                "name": "Lucian",
+                "games": 3,
+                "deaths": 21,
+                "kda": 2.0476190476190474,
+                "wr": 33.33333333333333
+            },
+            {
+                "name": "Milio",
+                "games": 2,
+                "deaths": 6,
+                "kda": 7.333333333333333,
+                "wr": 100.0
+            },
+            {
+                "name": "Jhin",
+                "games": 2,
+                "deaths": 22,
+                "kda": 2.8636363636363638,
+                "wr": 100.0
+            }
+        ]
+    },
+    "Waviz#NA1": {
+        "name": "Waviz#NA1",
+        "mostDeaths": 13,
+        "mostKills": 21,
+        "champions": [
+            {
+                "name": "Leblanc",
+                "games": 8,
+                "deaths": 34,
+                "kda": 4.147058823529412,
+                "wr": 75.0
+            },
+            {
+                "name": "Yasuo",
+                "games": 2,
+                "deaths": 13,
+                "kda": 1.3846153846153846,
+                "wr": 100.0
+            },
+            {
+                "name": "Akali",
+                "games": 2,
+                "deaths": 5,
+                "kda": 7.8,
+                "wr": 100.0
+            },
+            {
+                "name": "Varus",
+                "games": 2,
+                "deaths": 16,
+                "kda": 2.1875,
+                "wr": 50.0
+            }
+        ]
+    },
+    "bon#1790": {
+        "name": "bon#1790",
+        "mostDeaths": 13,
+        "mostKills": 6,
+        "champions": [
+            {
+                "name": "Yuumi",
+                "games": 8,
+                "deaths": 38,
+                "kda": 4.368421052631579,
+                "wr": 75.0
+            },
+            {
+                "name": "Nami",
+                "games": 2,
+                "deaths": 12,
+                "kda": 2.4166666666666665,
+                "wr": 100.0
+            },
+            {
+                "name": "Morgana",
+                "games": 2,
+                "deaths": 14,
+                "kda": 1.2142857142857142,
+                "wr": 0.0
+            },
+            {
+                "name": "Ezreal",
+                "games": 1,
+                "deaths": 3,
+                "kda": 3.0,
+                "wr": 100.0
+            }
+        ]
+    }
+}

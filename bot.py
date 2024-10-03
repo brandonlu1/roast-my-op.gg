@@ -1,22 +1,24 @@
 # bot.py
 import os
-import random
 from dotenv import load_dotenv
 import openai
+from index import getDB
 from openai import OpenAI
 
 import discord
 from discord.ext import commands
 
-openai.api_key = os.getenv("OPENAI_API_KEY")
 
 load_dotenv()
-TOKEN = os.getenv('DISCORD_TOKEN')
+DISCORD_TOKEN = os.getenv('DISCORD_TOKEN')
+RIOT_API_KEY = os.getenv('RIOT_API_KEY')
+openai.api_key = os.getenv("OPENAI_API_KEY")
+
 intents = discord.Intents.default()
 intents.message_content = True  # Enable the message content intent
 
 # 2
-bot = commands.Bot(command_prefix='!roast', intents=intents) #this can change to something else later
+bot = commands.Bot(command_prefix='$roast', intents=intents) #this can change to something else later
 
 @bot.event
 async def on_ready():
@@ -33,19 +35,17 @@ async def on_message(message):
     await bot.process_commands(message)
 
 client = OpenAI()
-@bot.command(name='me', help="rioast your op.gg")
+@bot.command(name='me', help="roast your op.gg")
 async def ask(ctx, who):
-
-    #first take all information from op.gg
-    #then feed it into chatgpt
-    
-
+    stats = await getDB(who)
+    print(stats)
     response = client.chat.completions.create(
         model="gpt-3.5-turbo",
         messages=[
-
+        {"role": "system", "content": "You are a vulgar league of legends comedian"},
+        {"role": "user", "content": "Roast my stats in one sentence: " + stats + ", mention numbers such as average deaths per game"}
         ]
     )
     msg = response.choices[0].message.content
     await ctx.send(msg)
-bot.run(TOKEN)
+bot.run(DISCORD_TOKEN)
